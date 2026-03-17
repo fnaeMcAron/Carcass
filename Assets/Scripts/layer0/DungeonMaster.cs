@@ -1,9 +1,6 @@
-using NUnit.Framework.Constraints;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.SceneManagement;
 
 public class DungeonMaster : MonoBehaviour
 {
@@ -87,5 +84,10 @@ public class DungeonMaster : MonoBehaviour
                 SwitchState(shardsState);
                 break;
         }
+    }
+
+    public void LoadLevel(string name)
+    {
+        SceneManager.LoadScene(name, LoadSceneMode.Single);
     }
 }

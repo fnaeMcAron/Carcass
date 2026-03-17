@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Inputs : MonoBehaviour
 {
@@ -40,7 +38,7 @@ public class Inputs : MonoBehaviour
     public void OnInteract(InputAction.CallbackContext context)
     {
         Debug.Log(context);
-        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+        DungeonMaster.Instance.LoadLevel("Menu");
     }
 
     public void OnCtrl(InputAction.CallbackContext context)
@@ -76,6 +74,6 @@ public class Inputs : MonoBehaviour
     public void OnCancelUI(InputAction.CallbackContext context)
     {
         Debug.Log(context);
-        SceneManager.LoadScene("Test", LoadSceneMode.Single);
+        DungeonMaster.Instance.LoadLevel("Test");
     }
 }
