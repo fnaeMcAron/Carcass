@@ -368,7 +368,19 @@ MonoBehaviour:
     m_ActionId: 8883e30d-b8c4-42a9-8a63-afa3619336d4
     m_ActionName: 'Shards/Dodge[/Keyboard/shift]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7539071448405927120}
+        m_TargetAssemblyTypeName: Inputs, Assembly-CSharp
+        m_MethodName: OnAbility
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 22aea507-aba8-4b2e-b166-070bbe70d86c
     m_ActionName: 'Shards/Ability[/Keyboard/q]'
   - m_PersistentCalls:
@@ -504,7 +516,7 @@ Canvas:
   m_GameObject: {fileID: 8096254575735378847}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0

@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,20 +13,36 @@ public class DungeonMaster : MonoBehaviour
     public OrganizerBase currentSceneContext;
 
     public ShardsState shardsState = new ShardsState();
-    public TerminalState terminalState = new TerminalState();
-    public PauseState pauseState = new PauseState();
-    public CutsceneState cutsceneState = new CutsceneState();
+    public sub_TerminalState terminalState = new sub_TerminalState();
+    public sub_PauseState pauseState = new sub_PauseState();
+    public sub_CutsceneState cutsceneState = new sub_CutsceneState();
     public MainMenuState mainMenuState = new MainMenuState();
 
     [Header("DEBUG")]
     public TMP_Text text;
 
-    GameState beforePauseState = new ShardsState();
+    private Stack<GameState> stateStack = new Stack<GameState>();
 
     public void SwitchState(GameState newState)
     {
         currentState?.Exit(this);
+        stateStack.Clear();
         currentState = newState;
+        currentState?.Enter(this);
+    }
+
+    public void PushState(GameState newState)
+    {
+        currentState?.Exit(this);
+        stateStack.Push(currentState);
+        currentState = newState;
+        currentState?.Enter(this);
+    }
+
+    public void PopState()
+    {
+        currentState?.Exit(this);
+        currentState = stateStack.Count > 0 ? stateStack.Pop() : shardsState;
         currentState?.Enter(this);
     }
 
@@ -56,21 +74,15 @@ public class DungeonMaster : MonoBehaviour
 
     public void TogglePause()
     {
-        if (currentState is PauseState)
-            SwitchState(beforePauseState);
-        else
-        {
-            beforePauseState = currentState;
-            SwitchState(pauseState);
-        }
+        if (currentState is sub_PauseState) 
+            PopState();
+        else 
+            PushState(pauseState);
     }
 
     public void RegisterScene(OrganizerBase context)
     {
         currentSceneContext = context;
-
-        //продолжить на остальном контексте по мере расширения
-        //rootPlayer = context.playerRoot;
 
         Debug.Log("Контекст сцены принят");
 
@@ -88,5 +100,15 @@ public class DungeonMaster : MonoBehaviour
     public void LoadLevel(string name)
     {
         SceneManager.LoadScene(name, LoadSceneMode.Single);
+    }
+
+    public void LoadLevelAdditive(string name)
+    {
+        SceneManager.LoadScene(name, LoadSceneMode.Additive);
+    }
+
+    public void UnloadLevel(string name)
+    {
+        SceneManager.UnloadSceneAsync(name);
     }
 }

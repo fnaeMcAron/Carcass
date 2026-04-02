@@ -27,7 +27,22 @@ public class Inputs : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        Debug.Log(context);
+        var movement = (DungeonMaster.Instance.currentSceneContext as MainGameOrganizer)?.movement;
+        if (movement == null) return;
+
+        Vector2 input = context.ReadValue<Vector2>();
+        Camera cam = DungeonMaster.Instance.currentSceneContext.cam;
+
+        Vector3 forward = cam.transform.forward;
+        Vector3 right = cam.transform.right;
+
+        forward.y = 0f;
+        right.y = 0f;
+        forward.Normalize();
+        right.Normalize();
+
+        Vector3 worldDir = (forward * input.y + right * input.x);
+        movement.SetMoveDirection(worldDir);
     }
 
     public void OnAttack(InputAction.CallbackContext context)
@@ -38,7 +53,6 @@ public class Inputs : MonoBehaviour
     public void OnInteract(InputAction.CallbackContext context)
     {
         Debug.Log(context);
-        DungeonMaster.Instance.LoadLevel("Menu");
     }
 
     public void OnCtrl(InputAction.CallbackContext context)
@@ -48,7 +62,7 @@ public class Inputs : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        Debug.Log(context);
+        (DungeonMaster.Instance.currentSceneContext as MainGameOrganizer)?.movement.OnJump(context);
     }
 
     public void OnDodge(InputAction.CallbackContext context)
@@ -59,6 +73,7 @@ public class Inputs : MonoBehaviour
     public void OnAbility(InputAction.CallbackContext context)
     {
         Debug.Log(context);
+        DungeonMaster.Instance.LoadLevel("Menu");
     }
 
     public void OnCameraAction(InputAction.CallbackContext context)

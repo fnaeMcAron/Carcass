@@ -8,8 +8,7 @@ public class DungeonMaster : MonoBehaviour
 
     [Header("Текущие ссылки и состояния")]
     public GameState currentState { get; private set; }
-    public Organizer currentSceneContext;
-    public GameObject rootPlayer;
+    public OrganizerBase currentSceneContext;
 
     public ShardsState shardsState = new ShardsState();
     public TerminalState terminalState = new TerminalState();
@@ -66,12 +65,9 @@ public class DungeonMaster : MonoBehaviour
         }
     }
 
-    public void RegisterScene(Organizer context)
+    public void RegisterScene(OrganizerBase context)
     {
         currentSceneContext = context;
-
-        //продолжить на остальном контексте по мере расширения
-        rootPlayer = context.playerRoot;
 
         Debug.Log("Контекст сцены принят");
 
@@ -89,5 +85,15 @@ public class DungeonMaster : MonoBehaviour
     public void LoadLevel(string name)
     {
         SceneManager.LoadScene(name, LoadSceneMode.Single);
+    }
+
+    public void LoadLevelAdditive(string name)
+    {
+        SceneManager.LoadScene(name, LoadSceneMode.Additive);
+    }
+
+    public void UnloadLevel(string name)
+    {
+        SceneManager.UnloadSceneAsync(name);
     }
 }

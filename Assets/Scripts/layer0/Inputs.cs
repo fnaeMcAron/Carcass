@@ -53,12 +53,13 @@ public class Inputs : MonoBehaviour
     public void OnInteract(InputAction.CallbackContext context)
     {
         Debug.Log(context);
-        DungeonMaster.Instance.LoadLevel("Menu");
     }
 
     public void OnCtrl(InputAction.CallbackContext context)
     {
         Debug.Log(context);
+        if (DungeonMaster.Instance.currentState is sub_CutsceneState) DungeonMaster.Instance.PopState();
+        else DungeonMaster.Instance.PushState(DungeonMaster.Instance.cutsceneState); 
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -74,6 +75,7 @@ public class Inputs : MonoBehaviour
     public void OnAbility(InputAction.CallbackContext context)
     {
         Debug.Log(context);
+        DungeonMaster.Instance.LoadLevel("Menu");
     }
 
     public void OnCameraAction(InputAction.CallbackContext context)
