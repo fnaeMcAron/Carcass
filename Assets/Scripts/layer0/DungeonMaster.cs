@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class DungeonMaster : MonoBehaviour
@@ -9,45 +10,54 @@ public class DungeonMaster : MonoBehaviour
     public static DungeonMaster Instance { get; private set; }
 
     [Header("Текущие ссылки и состояния")]
-    public GameState currentState { get; private set; }
+    public PlayerInput playerInput;
+    public Gatekeeper gatekeeper;
+    public IGameState currentState { get; private set; }
     public OrganizerBase currentSceneContext;
-
-    public ShardsState shardsState = new ShardsState();
-    public sub_TerminalState terminalState = new sub_TerminalState();
-    public sub_PauseState pauseState = new sub_PauseState();
-    public sub_CutsceneState cutsceneState = new sub_CutsceneState();
-    public MainMenuState mainMenuState = new MainMenuState();
+    public sub_PauseState PauseState;
 
     [Header("DEBUG")]
     public TMP_Text text;
 
-    private Stack<GameState> stateStack = new Stack<GameState>();
+    private Stack<IGameState> stateStack = new Stack<IGameState>();
 
-    public void SwitchState(GameState newState)
+    public void SwitchState(IGameState newState)
     {
-        currentState?.Exit(this);
+        currentState?.Exit();
         stateStack.Clear();
         currentState = newState;
-        currentState?.Enter(this);
+        currentState?.Enter();
     }
 
-    public void PushState(GameState newState)
+    public void PushState(IGameState newState)
     {
-        currentState?.Exit(this);
-        stateStack.Push(currentState);
+        if (currentState != null)
+        {
+            currentState.Exit();
+            stateStack.Push(currentState);
+        }
         currentState = newState;
-        currentState?.Enter(this);
+        currentState.Enter();
     }
 
     public void PopState()
     {
-        currentState?.Exit(this);
-        currentState = stateStack.Count > 0 ? stateStack.Pop() : shardsState;
-        currentState?.Enter(this);
+        currentState?.Exit();
+        if (stateStack.Count > 0)
+        {
+            currentState = stateStack.Pop();
+            currentState.Enter();
+        }
+        else
+        {
+            // Если стек пуст, возвращаемся к начальному стейту сцены
+            if (currentSceneContext != null) SwitchState(currentSceneContext.initialState);
+        }
     }
 
     void Awake()
     {
+        PauseState = new sub_PauseState();
         if (Instance == null)
         {
             Instance = this;
@@ -62,13 +72,12 @@ public class DungeonMaster : MonoBehaviour
 
     void Start()
     {
-        SwitchState(shardsState);
-        Application.targetFrameRate = 8000;
+        //Application.targetFrameRate = 8000;
     }
 
     void Update()
     {
-        currentState?.Update(this);
+        currentState?.Update();
         text.text = $"{currentState}";
     }
 
@@ -77,7 +86,7 @@ public class DungeonMaster : MonoBehaviour
         if (currentState is sub_PauseState) 
             PopState();
         else 
-            PushState(pauseState);
+            PushState(DungeonMaster.Instance.PauseState);
     }
 
     public void RegisterScene(OrganizerBase context)
@@ -85,30 +94,6 @@ public class DungeonMaster : MonoBehaviour
         currentSceneContext = context;
 
         Debug.Log("Контекст сцены принят");
-
-        switch (context.initialStateName)
-        {
-            case "MainMenu":
-                SwitchState(mainMenuState);
-                break;
-            case "MainGame":
-                SwitchState(shardsState);
-                break;
-        }
-    }
-
-    public void LoadLevel(string name)
-    {
-        SceneManager.LoadScene(name, LoadSceneMode.Single);
-    }
-
-    public void LoadLevelAdditive(string name)
-    {
-        SceneManager.LoadScene(name, LoadSceneMode.Additive);
-    }
-
-    public void UnloadLevel(string name)
-    {
-        SceneManager.UnloadSceneAsync(name);
+        SwitchState(context.initialState);
     }
 }

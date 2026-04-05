@@ -1,11 +1,10 @@
 public class MainMenuOrganizer : OrganizerBase
 {
-    public override string initialStateName { get { return "MainMenu"; } }
-
     public override void Start()
     {
         if (DungeonMaster.Instance != null)
         {
+            initialState = new MainMenuState(this);
             DungeonMaster.Instance.RegisterScene(this);
         }
     }

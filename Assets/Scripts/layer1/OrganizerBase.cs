@@ -4,7 +4,7 @@ public abstract class OrganizerBase : MonoBehaviour
 {
     [Header("Настройки контекста сцены")]
     public Camera cam;
-    public abstract string initialStateName { get;}
+    public IGameState initialState { get; set; }
 
     public virtual void Start()
     {

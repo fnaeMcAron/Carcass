@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 100}
-  m_SizeDelta: {x: 400, y: 50}
+  m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2974577086735315478
 CanvasRenderer:
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -147,6 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9198829939564289856}
   - component: {fileID: 7539071448405927120}
+  - component: {fileID: 4976695289700409421}
   - component: {fileID: 6588730936311469266}
   - component: {fileID: 3097703954101571646}
   m_Layer: 0
@@ -184,6 +185,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df93344c3023e5f4eb3e6268846c8421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inputs
+--- !u!114 &4976695289700409421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739010975936406689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1159e0e1389df164cb76be5c7a25ef8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gatekeeper
 --- !u!114 &6588730936311469266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d1bc5b3d90e7c4da3707d52f0c95ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DungeonMaster
+  playerInput: {fileID: 3097703954101571646}
+  gatekeeper: {fileID: 4976695289700409421}
   currentSceneContext: {fileID: 0}
   text: {fileID: 6806212426980124754}
 --- !u!114 &3097703954101571646
@@ -205,7 +220,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7739010975936406689}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -227,7 +242,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7539071448405927120}
         m_TargetAssemblyTypeName: Inputs, Assembly-CSharp
-        m_MethodName: OnMove
+        m_MethodName: OnShardsMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -243,7 +258,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7539071448405927120}
         m_TargetAssemblyTypeName: Inputs, Assembly-CSharp
-        m_MethodName: OnEscape
+        m_MethodName: OnShardsEscape
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -259,7 +274,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7539071448405927120}
         m_TargetAssemblyTypeName: Inputs, Assembly-CSharp
-        m_MethodName: OnEscape
+        m_MethodName: OnShardsEscape
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -272,51 +287,15 @@ MonoBehaviour:
     m_ActionId: 1fc49767-4c4a-4cb1-b996-136c73c3fe40
     m_ActionName: 'Pause/Escape[/Keyboard/escape]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7539071448405927120}
-        m_TargetAssemblyTypeName: Inputs, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: ec2e2e76-3992-4ab5-8280-b98d3ef802af
     m_ActionName: 'Terminal/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7539071448405927120}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 5ebba902-cd99-479e-8ca4-be00b0cab012
     m_ActionName: 'Terminal/Jump[/Keyboard/space]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7539071448405927120}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 49d12ea3-9c4d-40e9-a81b-4fd789b3cd0b
     m_ActionName: 'Terminal/OpenDoc[/Keyboard/ctrl]'
   - m_PersistentCalls:
@@ -360,18 +339,10 @@ MonoBehaviour:
     m_ActionId: d75d71b1-b7a4-424a-88de-2906ac56ad12
     m_ActionName: 'Shards/Attack[/Mouse/leftButton]'
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6a672c3a-5e0a-4941-be6e-9c71d8518f65
-    m_ActionName: 'Shards/Jump[/Keyboard/space]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8883e30d-b8c4-42a9-8a63-afa3619336d4
-    m_ActionName: 'Shards/Dodge[/Keyboard/shift]'
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7539071448405927120}
         m_TargetAssemblyTypeName: Inputs, Assembly-CSharp
-        m_MethodName: OnAbility
+        m_MethodName: OnShardsJump
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -381,6 +352,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_ActionId: 6a672c3a-5e0a-4941-be6e-9c71d8518f65
+    m_ActionName: 'Shards/Jump[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8883e30d-b8c4-42a9-8a63-afa3619336d4
+    m_ActionName: 'Shards/Dodge[/Keyboard/shift]'
+  - m_PersistentCalls:
+      m_Calls: []
     m_ActionId: 22aea507-aba8-4b2e-b166-070bbe70d86c
     m_ActionName: 'Shards/Ability[/Keyboard/q]'
   - m_PersistentCalls:
@@ -395,7 +374,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7539071448405927120}
         m_TargetAssemblyTypeName: Inputs, Assembly-CSharp
-        m_MethodName: OnInteract
+        m_MethodName: OnDebugToMainMenu
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -408,7 +387,19 @@ MonoBehaviour:
     m_ActionId: 9725df61-4c30-41d5-89c5-2c8a13e8c29f
     m_ActionName: 'Shards/Interact[/Keyboard/e]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7539071448405927120}
+        m_TargetAssemblyTypeName: Inputs, Assembly-CSharp
+        m_MethodName: OnTerminalEscape
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 121d6133-398a-4ae7-958c-a2648429da0e
     m_ActionName: 'Terminal/Escape[/Keyboard/escape]'
   - m_PersistentCalls:
@@ -423,7 +414,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7539071448405927120}
         m_TargetAssemblyTypeName: Inputs, Assembly-CSharp
-        m_MethodName: OnCancelUI
+        m_MethodName: OnDebugToMainGame
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -463,6 +454,50 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 7a1a7ddd-f3e4-4c2e-b8d4-4b367b200871
     m_ActionName: UI/Tracked Device Orientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7539071448405927120}
+        m_TargetAssemblyTypeName: Inputs, Assembly-CSharp
+        m_MethodName: OnDebugToMainMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4bff8720-cedc-4885-87dc-55031ee0ef7e
+    m_ActionName: 'Pause/Ability[/Keyboard/q]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ef39a9fc-eb83-4027-b454-ca306d1e1c77
+    m_ActionName: 'Cutscene/Hide[/Mouse/rightButton,/Keyboard/h]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f575a1bc-181d-4767-8599-07415b4d27c3
+    m_ActionName: 'Cutscene/Read[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 11c653a1-7e08-4bfb-ac6e-4f4d00a38614
+    m_ActionName: 'Cutscene/Skip[/Keyboard/ctrl,/Keyboard/tab]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7539071448405927120}
+        m_TargetAssemblyTypeName: Inputs, Assembly-CSharp
+        m_MethodName: OnDebugToTerminal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8ec11538-0e8c-4b63-9496-4bfb74f4d0b4
+    m_ActionName: 'Shards/d_MainMenu[/Keyboard/backslash]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Shards
