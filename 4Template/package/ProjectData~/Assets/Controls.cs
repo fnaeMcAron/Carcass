@@ -235,6 +235,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""d_MainMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""8ec11538-0e8c-4b63-9496-4bfb74f4d0b4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -255,7 +264,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -266,7 +275,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -277,7 +286,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -288,7 +297,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -299,7 +308,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Escape"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -310,7 +319,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -318,10 +327,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f865c1ba-c44e-471f-87cc-06b2bb12bf90"",
-                    ""path"": """",
+                    ""path"": ""<Mouse>/middleButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""CycleTarget"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -332,7 +341,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""SwitchCharacter0"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -343,7 +352,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/2"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""SwitchCharacter1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -354,7 +363,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/3"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""SwitchCharacter2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -365,7 +374,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/4"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""SwitchCharacter3"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -376,7 +385,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/5"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""SwitchCharacter4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -387,7 +396,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -398,7 +407,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -409,7 +418,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Dodge"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -420,7 +429,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Ability"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -442,7 +451,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/scroll/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""SwitchWeapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -453,7 +462,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/scroll/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""SwitchWeapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -464,7 +473,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/scroll/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""SwitchWeapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -475,7 +484,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/scroll/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""SwitchWeapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -486,7 +495,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""ResetCameraANDToggleTargetLock"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -497,8 +506,19 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f7b03d6e-73cb-4cd3-bf79-a9beafcfbb5f"",
+                    ""path"": ""<Keyboard>/backslash"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""d_MainMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -581,7 +601,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -592,7 +612,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -603,7 +623,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -614,7 +634,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -625,7 +645,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Escape"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -658,7 +678,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Ability"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -669,8 +689,120 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/backspace"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Suicide"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Cutscene"",
+            ""id"": ""b9ebd883-76a6-4309-be10-7460beb74a52"",
+            ""actions"": [
+                {
+                    ""name"": ""Hide"",
+                    ""type"": ""Button"",
+                    ""id"": ""ef39a9fc-eb83-4027-b454-ca306d1e1c77"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Read"",
+                    ""type"": ""Button"",
+                    ""id"": ""f575a1bc-181d-4767-8599-07415b4d27c3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skip"",
+                    ""type"": ""Button"",
+                    ""id"": ""11c653a1-7e08-4bfb-ac6e-4f4d00a38614"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""7671dfdb-d446-4d66-80f5-9fb595ae8bfb"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";KeyboardMouse"",
+                    ""action"": ""Hide"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2bb7ddb-886d-462f-9749-c42a45a52c35"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";KeyboardMouse"",
+                    ""action"": ""Hide"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""64b6b502-1ddb-4016-83fa-ecfb1bba6e8e"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";KeyboardMouse"",
+                    ""action"": ""Read"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""33d76a0d-8c43-4c09-badc-ca6e43fb7027"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";KeyboardMouse"",
+                    ""action"": ""Read"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4d824859-5b33-4591-988a-18df41616371"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";KeyboardMouse"",
+                    ""action"": ""Read"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4c522305-4677-4e71-8d21-ee65c8a3260b"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";KeyboardMouse"",
+                    ""action"": ""Skip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""31933a13-cd39-437d-8a57-42bfc4ce9c4f"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";KeyboardMouse"",
+                    ""action"": ""Skip"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -690,7 +822,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Ability"",
+                    ""name"": ""d_MainMenu"",
                     ""type"": ""Button"",
                     ""id"": ""4bff8720-cedc-4885-87dc-55031ee0ef7e"",
                     ""expectedControlType"": """",
@@ -706,7 +838,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Escape"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -718,7 +850,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Ability"",
+                    ""action"": ""d_MainMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -845,10 +977,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7e6d786e-6981-4c57-8726-70aa7e5b6d69"",
-                    ""path"": ""<Keyboard>/t"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";KeyboardMouse"",
                     ""action"": ""Cancel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -933,7 +1065,35 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""KeyboardMouse"",
+            ""bindingGroup"": ""KeyboardMouse"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Gamepad"",
+            ""bindingGroup"": ""Gamepad"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // Shards
         m_Shards = asset.FindActionMap("Shards", throwIfNotFound: true);
@@ -953,6 +1113,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Shards_ResetCameraANDToggleTargetLock = m_Shards.FindAction("ResetCameraANDToggleTargetLock", throwIfNotFound: true);
         m_Shards_Interact = m_Shards.FindAction("Interact", throwIfNotFound: true);
         m_Shards_Escape = m_Shards.FindAction("Escape", throwIfNotFound: true);
+        m_Shards_d_MainMenu = m_Shards.FindAction("d_MainMenu", throwIfNotFound: true);
         // Terminal
         m_Terminal = asset.FindActionMap("Terminal", throwIfNotFound: true);
         m_Terminal_Move = m_Terminal.FindAction("Move", throwIfNotFound: true);
@@ -961,10 +1122,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Terminal_Ability = m_Terminal.FindAction("Ability", throwIfNotFound: true);
         m_Terminal_Suicide = m_Terminal.FindAction("Suicide", throwIfNotFound: true);
         m_Terminal_Escape = m_Terminal.FindAction("Escape", throwIfNotFound: true);
+        // Cutscene
+        m_Cutscene = asset.FindActionMap("Cutscene", throwIfNotFound: true);
+        m_Cutscene_Hide = m_Cutscene.FindAction("Hide", throwIfNotFound: true);
+        m_Cutscene_Read = m_Cutscene.FindAction("Read", throwIfNotFound: true);
+        m_Cutscene_Skip = m_Cutscene.FindAction("Skip", throwIfNotFound: true);
         // Pause
         m_Pause = asset.FindActionMap("Pause", throwIfNotFound: true);
         m_Pause_Escape = m_Pause.FindAction("Escape", throwIfNotFound: true);
-        m_Pause_Ability = m_Pause.FindAction("Ability", throwIfNotFound: true);
+        m_Pause_d_MainMenu = m_Pause.FindAction("d_MainMenu", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -983,6 +1149,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     {
         UnityEngine.Debug.Assert(!m_Shards.enabled, "This will cause a leak and performance issues, Controls.Shards.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_Terminal.enabled, "This will cause a leak and performance issues, Controls.Terminal.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Cutscene.enabled, "This will cause a leak and performance issues, Controls.Cutscene.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_Pause.enabled, "This will cause a leak and performance issues, Controls.Pause.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, Controls.UI.Disable() has not been called.");
     }
@@ -1076,6 +1243,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Shards_ResetCameraANDToggleTargetLock;
     private readonly InputAction m_Shards_Interact;
     private readonly InputAction m_Shards_Escape;
+    private readonly InputAction m_Shards_d_MainMenu;
     /// <summary>
     /// Provides access to input actions defined in input action map "Shards".
     /// </summary>
@@ -1152,6 +1320,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Escape => m_Wrapper.m_Shards_Escape;
         /// <summary>
+        /// Provides access to the underlying input action "Shards/d_MainMenu".
+        /// </summary>
+        public InputAction @d_MainMenu => m_Wrapper.m_Shards_d_MainMenu;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Shards; }
@@ -1225,6 +1397,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Escape.started += instance.OnEscape;
             @Escape.performed += instance.OnEscape;
             @Escape.canceled += instance.OnEscape;
+            @d_MainMenu.started += instance.OnD_MainMenu;
+            @d_MainMenu.performed += instance.OnD_MainMenu;
+            @d_MainMenu.canceled += instance.OnD_MainMenu;
         }
 
         /// <summary>
@@ -1284,6 +1459,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Escape.started -= instance.OnEscape;
             @Escape.performed -= instance.OnEscape;
             @Escape.canceled -= instance.OnEscape;
+            @d_MainMenu.started -= instance.OnD_MainMenu;
+            @d_MainMenu.performed -= instance.OnD_MainMenu;
+            @d_MainMenu.canceled -= instance.OnD_MainMenu;
         }
 
         /// <summary>
@@ -1469,11 +1647,129 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     /// </summary>
     public TerminalActions @Terminal => new TerminalActions(this);
 
+    // Cutscene
+    private readonly InputActionMap m_Cutscene;
+    private List<ICutsceneActions> m_CutsceneActionsCallbackInterfaces = new List<ICutsceneActions>();
+    private readonly InputAction m_Cutscene_Hide;
+    private readonly InputAction m_Cutscene_Read;
+    private readonly InputAction m_Cutscene_Skip;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Cutscene".
+    /// </summary>
+    public struct CutsceneActions
+    {
+        private @Controls m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public CutsceneActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Cutscene/Hide".
+        /// </summary>
+        public InputAction @Hide => m_Wrapper.m_Cutscene_Hide;
+        /// <summary>
+        /// Provides access to the underlying input action "Cutscene/Read".
+        /// </summary>
+        public InputAction @Read => m_Wrapper.m_Cutscene_Read;
+        /// <summary>
+        /// Provides access to the underlying input action "Cutscene/Skip".
+        /// </summary>
+        public InputAction @Skip => m_Wrapper.m_Cutscene_Skip;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Cutscene; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="CutsceneActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(CutsceneActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="CutsceneActions" />
+        public void AddCallbacks(ICutsceneActions instance)
+        {
+            if (instance == null || m_Wrapper.m_CutsceneActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_CutsceneActionsCallbackInterfaces.Add(instance);
+            @Hide.started += instance.OnHide;
+            @Hide.performed += instance.OnHide;
+            @Hide.canceled += instance.OnHide;
+            @Read.started += instance.OnRead;
+            @Read.performed += instance.OnRead;
+            @Read.canceled += instance.OnRead;
+            @Skip.started += instance.OnSkip;
+            @Skip.performed += instance.OnSkip;
+            @Skip.canceled += instance.OnSkip;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="CutsceneActions" />
+        private void UnregisterCallbacks(ICutsceneActions instance)
+        {
+            @Hide.started -= instance.OnHide;
+            @Hide.performed -= instance.OnHide;
+            @Hide.canceled -= instance.OnHide;
+            @Read.started -= instance.OnRead;
+            @Read.performed -= instance.OnRead;
+            @Read.canceled -= instance.OnRead;
+            @Skip.started -= instance.OnSkip;
+            @Skip.performed -= instance.OnSkip;
+            @Skip.canceled -= instance.OnSkip;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="CutsceneActions.UnregisterCallbacks(ICutsceneActions)" />.
+        /// </summary>
+        /// <seealso cref="CutsceneActions.UnregisterCallbacks(ICutsceneActions)" />
+        public void RemoveCallbacks(ICutsceneActions instance)
+        {
+            if (m_Wrapper.m_CutsceneActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="CutsceneActions.AddCallbacks(ICutsceneActions)" />
+        /// <seealso cref="CutsceneActions.RemoveCallbacks(ICutsceneActions)" />
+        /// <seealso cref="CutsceneActions.UnregisterCallbacks(ICutsceneActions)" />
+        public void SetCallbacks(ICutsceneActions instance)
+        {
+            foreach (var item in m_Wrapper.m_CutsceneActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_CutsceneActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="CutsceneActions" /> instance referencing this action map.
+    /// </summary>
+    public CutsceneActions @Cutscene => new CutsceneActions(this);
+
     // Pause
     private readonly InputActionMap m_Pause;
     private List<IPauseActions> m_PauseActionsCallbackInterfaces = new List<IPauseActions>();
     private readonly InputAction m_Pause_Escape;
-    private readonly InputAction m_Pause_Ability;
+    private readonly InputAction m_Pause_d_MainMenu;
     /// <summary>
     /// Provides access to input actions defined in input action map "Pause".
     /// </summary>
@@ -1490,9 +1786,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Escape => m_Wrapper.m_Pause_Escape;
         /// <summary>
-        /// Provides access to the underlying input action "Pause/Ability".
+        /// Provides access to the underlying input action "Pause/d_MainMenu".
         /// </summary>
-        public InputAction @Ability => m_Wrapper.m_Pause_Ability;
+        public InputAction @d_MainMenu => m_Wrapper.m_Pause_d_MainMenu;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1522,9 +1818,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Escape.started += instance.OnEscape;
             @Escape.performed += instance.OnEscape;
             @Escape.canceled += instance.OnEscape;
-            @Ability.started += instance.OnAbility;
-            @Ability.performed += instance.OnAbility;
-            @Ability.canceled += instance.OnAbility;
+            @d_MainMenu.started += instance.OnD_MainMenu;
+            @d_MainMenu.performed += instance.OnD_MainMenu;
+            @d_MainMenu.canceled += instance.OnD_MainMenu;
         }
 
         /// <summary>
@@ -1539,9 +1835,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Escape.started -= instance.OnEscape;
             @Escape.performed -= instance.OnEscape;
             @Escape.canceled -= instance.OnEscape;
-            @Ability.started -= instance.OnAbility;
-            @Ability.performed -= instance.OnAbility;
-            @Ability.canceled -= instance.OnAbility;
+            @d_MainMenu.started -= instance.OnD_MainMenu;
+            @d_MainMenu.performed -= instance.OnD_MainMenu;
+            @d_MainMenu.canceled -= instance.OnD_MainMenu;
         }
 
         /// <summary>
@@ -1770,6 +2066,32 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="UIActions" /> instance referencing this action map.
     /// </summary>
     public UIActions @UI => new UIActions(this);
+    private int m_KeyboardMouseSchemeIndex = -1;
+    /// <summary>
+    /// Provides access to the input control scheme.
+    /// </summary>
+    /// <seealso cref="UnityEngine.InputSystem.InputControlScheme" />
+    public InputControlScheme KeyboardMouseScheme
+    {
+        get
+        {
+            if (m_KeyboardMouseSchemeIndex == -1) m_KeyboardMouseSchemeIndex = asset.FindControlSchemeIndex("KeyboardMouse");
+            return asset.controlSchemes[m_KeyboardMouseSchemeIndex];
+        }
+    }
+    private int m_GamepadSchemeIndex = -1;
+    /// <summary>
+    /// Provides access to the input control scheme.
+    /// </summary>
+    /// <seealso cref="UnityEngine.InputSystem.InputControlScheme" />
+    public InputControlScheme GamepadScheme
+    {
+        get
+        {
+            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
+            return asset.controlSchemes[m_GamepadSchemeIndex];
+        }
+    }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Shards" which allows adding and removing callbacks.
     /// </summary>
@@ -1889,6 +2211,13 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnEscape(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "d_MainMenu" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnD_MainMenu(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Terminal" which allows adding and removing callbacks.
@@ -1941,6 +2270,35 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnEscape(InputAction.CallbackContext context);
     }
     /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Cutscene" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="CutsceneActions.AddCallbacks(ICutsceneActions)" />
+    /// <seealso cref="CutsceneActions.RemoveCallbacks(ICutsceneActions)" />
+    public interface ICutsceneActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Hide" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnHide(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Read" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRead(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Skip" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSkip(InputAction.CallbackContext context);
+    }
+    /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Pause" which allows adding and removing callbacks.
     /// </summary>
     /// <seealso cref="PauseActions.AddCallbacks(IPauseActions)" />
@@ -1955,12 +2313,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnEscape(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Ability" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "d_MainMenu" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnAbility(InputAction.CallbackContext context);
+        void OnD_MainMenu(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
